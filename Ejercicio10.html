@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    
+    <script type="text/javascript">
+
+        /*Definir una función que determine si la cadena de texto que se le pasa como parámetro es un palíndromo,
+        es decir, si se lee de la misma forma desde la izquierda y desde la derecha. Ejemplo de palíndromo complejo: "La ruta nos aporto otro paso natural".*/
+        
+        function palindromo(cadena) {
+
+            var resultado = "La cadena \"" + cadena + "\"\n";
+            var cadenaOriginal = cadena.toLowerCase();
+            var letrasEspacios = cadenaOriginal.split("");
+            var cadenaSinEspacios = "";
+            for (i in letrasEspacios) {
+                if (letrasEspacios[i] != " ") {
+                    cadenaSinEspacios += letrasEspacios[i];
+                }
+            }
+
+            var letras = cadenaSinEspacios.split("");
+            var letrasReves = cadenaSinEspacios.split("").reverse();
+
+            var iguales = true;
+
+            for (i in letras) {
+                if (letras[i] == letrasReves[i]) {
+                    //TODO OK
+                } else {
+                    iguales = false;
+                }
+            }
+            if (iguales) {
+                resultado += " es un palíndrommo";
+            } else {
+                resultado += " no es un palíndromo";
+            }
+            return resultado;
+        }
+
+        alert(palindromo("La ruta nos aporto otro paso natural"));
+        alert(palindromo("Esta frase no se parece a ningún palíndromo"));
+
+    </script>
+
+</body>
+</html>

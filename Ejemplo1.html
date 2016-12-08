@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+
+    <script type="text/javascript">
+
+        var cad = "Sergi:Garcia: 123456";
+        var tfo;
+        cad = cad.toUpperCase();
+        alert(cad);
+        splitTodosCampos = cad.split(":");
+        split1Campo = cad.split(":", 1);
+        alert(splitTodosCampos);
+        alert(split1Campo);
+        tfo = splitTodosCampos[2];
+        //CAMBIO EN EL TELÉFONO LOS NÚMEROS 3 POR 9S
+
+        tfo = tfo.replace("3", "9");
+        alert(tfo);
+
+        //MUESTRO EL QUINTO NÚMERO DEL TELÉFONO
+
+        alert(tfo.charAt(4));
+        alert("Bienvenido al CEED CV");
+
+
+    </script>
+
+</body>
+</html>
