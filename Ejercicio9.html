@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <script type="text/javascript">
+
+        /*Definir una función que muestre información sobre una cadena de texto que se le pasa como argumento. 
+        A partir de la cadena que se le pasa, la función determina si esa cadena está formada sólo por mayúsculas, sólo por minúsculas o por una mezcla de ambas.*/
+
+        var frase = prompt("Introduce una frase por favor");
+        var resultado = mayumin(frase);
+        alert("La frase introducida es "+frase);
+        alert(resultado);
+
+        function mayumin(frase) {
+
+            if (frase == frase.toLowerCase()) {
+                return "la frase está en minúsculas.";
+            } else if (frase == frase.toUpperCase()) {
+                return "la frase está en mayúsculas";
+            } else {
+                return "tiene mayúsculas y minúsculas.";
+            }
+
+        }
+
+        
+
+    </script>
+
+</body>
+</html>
