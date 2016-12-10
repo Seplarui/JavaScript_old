@@ -1,0 +1,46 @@
+<html>
+    <head><title>Tema 4 - Ejercicio 3</title></head>
+    
+    <body>
+        
+        <script type="text/javascript">
+        
+            /*3) Haz un programa que pregunte una letra de la A a la Z. Tras ello te dirá cuantos DNIs de 3 cifras (del 001 al 999) tienen esa letra
+            y te mostrará el contenido de un array que contenga los DNIs que tienen esa letra.*/
+            
+            function calcular_letra(dni) {
+                
+                letra= new Array("T","R","W","A","G","M","Y","F","P","D","X","B","N","J","Z","S","Q","V","H","L","C","K","E");
+                
+                var letra_dni=dni%23;
+                
+                return letra[letra_dni];
+                
+            }
+            
+            var preguntar_letra=prompt("Introduce una letra de un DNI");
+            var num_dni=0;
+            
+            for (i=1;i<=999;i++) {
+                
+                if (preguntar_letra==calcular_letra[i])
+                    {
+                    
+                    num_dni=num_dni+1;
+                    document.write("El número de dni's con la letra "+preguntar_letra+", es "+num_dni);
+                    
+                    
+                    }
+                
+            }
+            
+        
+        
+        </script>
+    
+    
+    
+    </body>
+
+
+</html>
