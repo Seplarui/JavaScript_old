@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>Ejercicio 4</title>
+    
+    </head>
+    
+    <body>
+        
+        <script type="text/javascript">
+            
+            /*1) Realiza un programa que cada 20 segundos (mediante setInterval) solicite un DNI hasta que
+            alguien le muestre la cadena -1. El programa deberá mostrar en ese momento, las letras de todos
+            los DNIs introducidos.Calculo de letra de DNI:https://es.wikipedia.org/wiki/N%C3%BAmero_de_identificaci%C3%B3n_fiscal*/
+                   
+            function calcular_dni(dni) {
+                
+                letra= new Array("T","R","W","A","G","M","Y","F","P","D","X","B","N","J","Z","S","Q","V","H","L","C","K","E");
+                
+                var letra_dni=letra%23;
+                
+                return letra[letra_dni];
+                
+            }
+            
+          var intervalo=setInterval("hacer();",20000);
+            var miArray=[];
+            
+            function hacer()  {
+                
+                var cad=prompt("Introduce DNI o -1 para parar","12345678");
+                
+                if (cad=="-1") {
+                    clearInterval(intervalo);
+                    alert(miArray.join(";"));
+                } else {
+                    
+                    let=calcular_dni(cad);
+                    miArray.push(let);
+                }
+            }
+            
+        
+        
+        
+        
+     
+        
+        
+        </script>
+    
+    
+    
+    
+    </body>
+
+
+
+
+
+</html>
