@@ -10,30 +10,27 @@
             
             function calcular_letra(dni) {
                 
-                letra= new Array("T","R","W","A","G","M","Y","F","P","D","X","B","N","J","Z","S","Q","V","H","L","C","K","E");
+                letra= ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
                 
-                var letra_dni=dni%23;
-                
-                return letra[letra_dni];
-                
+                 return letra[dni%23];
             }
             
-            var preguntar_letra=prompt("Introduce una letra de un DNI");
+            var l=prompt("Introduce una letra de un DNI","A");
             var num_dni=0;
+            var miArray=[];
             
             for (i=1;i<=999;i++) {
+                           
                 
-                if (preguntar_letra==calcular_letra[i])
-                    {
+                if(l==calcular_letra(i)) {
+                    num_dni++;
+                    miArray.push(i);
                     
-                    num_dni=num_dni+1;
-                    document.write("El número de dni's con la letra "+preguntar_letra+", es "+num_dni);
-                    
-                    
-                    }
+                }
                 
             }
-            
+            alert("Hay "+num_dni+" dnis hasta 999 con la letra "+ l);
+            alert(miArray);
         
         
         </script>
