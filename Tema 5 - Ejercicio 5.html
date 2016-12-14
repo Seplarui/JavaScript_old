@@ -1,0 +1,29 @@
+<html>
+    
+    <head meta charset="utf-8"><title>Ejercicio 5</title></head>
+    
+    
+    <body>
+        <script type="text/javascript">
+        
+           function separar_cadena(cadena) {
+               
+               cadenaPartida=cadena.split(":");
+               alert("CP "+cadenaPartida[4]);
+               alert("Apellidos "+cadenaPartida[1]);
+               alert("Email "+cadenaPartida[3]);    
+               alert("Email servidor "+cadenaPartida[3].split("@")[1]);
+    
+           }
+            
+            cadena="nonombre:apellidos:telefono:email@servidor:codigopostal";
+            separar_cadena(cadena);
+    
+        
+        </script>
+        
+        
+    
+    </body>
+
+</html>

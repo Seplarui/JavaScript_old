@@ -1,0 +1,65 @@
+<html>
+    
+    <head><title>Tema 4 - Ejercicio 4</title></head>
+    
+    <body>
+        
+        
+        <script type="text/javascript">
+            
+            /*4) Haz un programa que calcule cuantos números son primos y palíndromos hasta 100000 y los meta todos en un array.*/
+            
+            function primo(numero) {
+                
+                var contador=2;
+                
+                var primo=true;
+                
+                while((primo) && (contador!=numero)) {
+                    
+                    if (numero%contador==0) {
+                        primo=false;
+                        contador++;
+                    }
+                }
+                
+                return primo;
+                
+                
+            }
+            
+            
+            var miArray=[];
+            
+            for (i=0;i<=100;i++) {
+                
+                primo(i);
+                if (primo) {
+                    miArray.push(i);
+                }
+                
+            }
+            
+            document.writeln(miArray);
+            
+            
+            
+            
+        
+        
+        
+        
+        
+        
+        </script>
+    
+    
+    
+    
+    
+    </body>
+
+
+
+
+</html>
