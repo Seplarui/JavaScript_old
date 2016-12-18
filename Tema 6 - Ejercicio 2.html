@@ -1,0 +1,55 @@
+<html>
+    
+    <head><title>Tema 6 - Ejercicio 2.html</title></head>
+    
+    <body>
+        
+        
+        
+        <script type="text/javascript">
+            
+            
+            /*2) Realizar un programa con dos botones “Comenzar Saludos” y “Parar Saludos”. Al hacer click en
+            “Comenzar Saludos”, lance un setInterval que cada 5 segundos muestre un alert con “Hola”. El
+            botón “Parar Saludos” parará esa secuencia.*/
+            
+            var estado=-1;
+            
+            function comenzar() {
+                
+                if(estado!=-1) {
+                    console.log("Ya estamos saludando, se cancela");
+                } else {
+                    estado=setInterval("alert('Hola');",5000);
+                }
+                
+            }
+            
+            function parar() {
+                
+                if(estado!=-1) {
+                    
+                    clearInterval(estado);
+                    estado=-1;
+
+                } else {
+                    console.log("No hay saludo que parar");
+                }
+            }
+            
+        
+        
+        
+        
+        </script>
+        
+        <input type="button" onclick="comenzar();" value="Comenzar saludo">
+        <input type="button" onclick="parar();" value="Parar saludo">
+    
+    
+    
+    </body>
+
+
+
+</html>

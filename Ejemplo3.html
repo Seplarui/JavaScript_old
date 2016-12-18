@@ -1,0 +1,40 @@
+<html>
+    
+    <head><title>Ejemplo 3</title></head>
+    
+    <body>
+        
+        <a name="html" href="http://www.google.es">Curso número 1 (HTML)</a><br/>
+        <a name="css" href="#">Curso número 2 (CSS)</a><br/>
+        <a name="xml" href="#">Curso número 3 (XML)</a><br/>
+        
+        <script type="text/javascript">
+            
+            enlaces=document.getElementsByTagName("a");
+           
+            
+            document.write("<br/><br/>");
+           // document.write("Número de anchors del documento: "+document.href.length+"<br/>");
+          //  document.write("Primer anchor del documento: "+document.href[0].text +"<br/>");
+           // document.write("Segundo anchor del documento: "+document.hfref[1].name)+"<br/>");
+            document.writeln("Número de enlaces del documento: "+enlaces.length);
+            
+            for(i=0;i<enlaces.length-1;i++) {
+                
+                document.writeln("Enlace número: "+"<br/>"+i+ " y el enlace es: "+enlaces[i]);
+                
+                
+                
+            }
+        
+        
+        
+        
+        </script>
+    
+    
+    
+    
+    </body>
+
+</html>
