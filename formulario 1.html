@@ -1,0 +1,49 @@
+<html>
+    
+    <head><title>Formulario 1</title></head>
+    
+    <body>
+        
+        <input type="text" id="miTexto" value="Hola Mundo">
+        <br/>
+        <input type="radio" id="preguntaSI" name="pregunta" value="si" checked/>SI
+        <input type="radio" id="preguntaNO" name="pregunta" value="no"/>NO
+        
+        
+        
+        
+        
+        
+        <script type="text/javascript">
+            
+            var elemento=document.getElementById("miTexto");
+            document.writeln(elemento.value);
+            
+            var radio=document.getElementsByName("pregunta");
+            
+            for (i=0;i<=radio.length;i++) {
+                
+               if(radio[i].checked==true) {
+                   
+                   document.write("Valor del elmento marcado "+radio[i].value);
+               }
+                
+                
+                
+            }
+            
+            
+            
+        
+        
+        
+        
+        </script>
+    
+    
+    
+    </body>
+
+
+
+</html>
